@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/template/header/header.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
@@ -20,6 +22,7 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { ProductCreateComponent } from './components/template/product/product-create/product-create.component';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +45,10 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
