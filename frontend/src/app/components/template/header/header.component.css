@@ -1,6 +1,7 @@
 .header{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     /* background-color: ghostwhite; */
 }
 
@@ -16,7 +17,12 @@
 }
 
 .header .title-group {
-    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.header .title-icon{
+    font-weight: lighter;
+    color: white
 }
 
 .header .material-icons {
