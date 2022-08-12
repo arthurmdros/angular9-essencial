@@ -1,0 +1,16 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: ghostwhite;
+}
+
+.footer > span{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.footer .material-icons {
+    padding-right: 5px;
+}
