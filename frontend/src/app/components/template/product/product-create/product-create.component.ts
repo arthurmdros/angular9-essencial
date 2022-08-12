@@ -12,7 +12,7 @@ export class ProductCreateComponent implements OnInit {
 
   product: Product = {
     name: '',
-    price: 0
+    price: null
   }
 
   constructor(private productService : ProductService, private router: Router) { }
@@ -21,9 +21,17 @@ export class ProductCreateComponent implements OnInit {
   }
 
   createProduct() {
-    this.productService.create(this.product).subscribe(value => {
-      this.productService.showMessage(`O produto ${value.name} foi criado!`)
-      this.router.navigate(['/products'])
-    })
+    if(this.product.name === ''){
+      this.productService.showMessage(`Nome é obrigatório!`)
+    }else{
+      this.productService.create(this.product).subscribe(value => {
+        this.productService.showMessage(`O produto ${value.name} foi criado!`)
+        this.navigateToList()
+      })
+    }
+  }
+
+  navigateToList(){
+    this.router.navigate(['/products'])
   }
 }
