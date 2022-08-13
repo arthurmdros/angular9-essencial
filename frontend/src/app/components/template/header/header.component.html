@@ -5,11 +5,11 @@
         </a>
     </span>
     <span class="title-group">
-        <a class="title-icon">
+        <a routerLink="{{ headerService.headerData.routeUrl }}" class="title-icon">
             <i class="material-icons">
-                home
+                {{headerService.headerData.icon}}
             </i>
-            Início
+            {{headerService.headerData.title}}
         </a>
     </span>
 </mat-toolbar>
